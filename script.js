@@ -108,7 +108,147 @@ document.getElementById('cart_btn').addEventListener('click', (event) => {
 
 });
 
+// document.getElementById('monroe_btn').addEventListener('click', (event) => {
+//   cart.push('MARILYN MONROE T-SHIRT');
+//   total.push(16);
+//   let element_cart_list = document.getElementById('cart_list');
+//   let new_li = document.createElement('li');
+//   new_li.innerText = cart.slice(-1)[0];
 
+//   element_cart_list.appendChild(new_li);
+//   let new_span = document.createElement('span');
+//   new_span.innerText = total.slice(-1)[0];
+
+//   element_cart_list.appendChild(new_span);
+//   let new_span2 = document.createElement('span');
+//   new_span2.innerText = 'EUR';
+
+//   element_cart_list.appendChild(new_span2);
+//   let element_total = document.getElementById('total');
+//   element_total.innerText = total.reduce((a,b) => a+b, 0);
+
+// });
+
+// document.getElementById('lace_btn').addEventListener('click', (event) => {
+//   cart.push('LACE TRIM T-SHIRT');
+//   total.push(19);
+//   let element_cart_list2 = document.getElementById('cart_list');
+//   let new_li2 = document.createElement('li');
+//   new_li2.innerText = cart.slice(-1)[0];
+
+//   element_cart_list2.appendChild(new_li2);
+//   let new_span3 = document.createElement('span');
+//   new_span3.innerText = total.slice(-1)[0];
+
+//   element_cart_list2.appendChild(new_span3);
+//   let new_span4 = document.createElement('span');
+//   new_span4.innerText = 'EUR';
+
+//   element_cart_list2.appendChild(new_span4);
+//   let element_total2 = document.getElementById('total');
+//   element_total2.innerText = total.reduce((a,b) => a+b, 0);
+
+// });
+
+// document.getElementById('over_btn').addEventListener('click', (event) => {
+//   cart.push('OVERSIZED T-SHIRT');
+//   total.push(17);
+//   let element_cart_list3 = document.getElementById('cart_list');
+//   let new_li3 = document.createElement('li');
+//   new_li3.innerText = cart.slice(-1)[0];
+
+//   element_cart_list3.appendChild(new_li3);
+//   let new_span5 = document.createElement('span');
+//   new_span5.innerText = total.slice(-1)[0];
+
+//   element_cart_list3.appendChild(new_span5);
+//   let new_span6 = document.createElement('span');
+//   new_span6.innerText = 'EUR';
+
+//   element_cart_list3.appendChild(new_span6);
+//   let element_total3 = document.getElementById('total');
+//   element_total3.innerText = total.reduce((a,b) => a+b, 0);
+
+// });
+
+
+
+
+//   if(--window.LoopTrap <= 0) throw "Infinite loop.";
+//   console.log("heyey")
+//   index = 0;
+//   price.forEach((item) => {
+//     let element_div = document.getElementById('showroom');
+
+//     let new_div = document.createElement('div')
+//     new_div.setAttribute("id", "div")
+//     element_div.appendChild(new_div);
+
+//     let new_div2 = document.createElement('div')
+//     new_div2.setAttribute("id", "div2")
+//     new_div.appendChild(new_div2);
+
+//     let new_img = document.createElement('img');
+//     new_img.setAttribute("width", "155px");
+//     new_img.setAttribute("src", src[index]);
+//     // element_div.appendChild(new_img);
+//     new_div2.appendChild(new_img);
+
+
+//     let new_span = document.createElement('span');
+//     // element_div.appendChild(new_span);
+//     new_span.innerText = description[index];
+//     new_div2.appendChild(new_span);
+
+//     let new_span2 = document.createElement('span');
+//     // element_div.appendChild(new_span2);
+//     new_span2.innerText = item;
+//     new_div2.appendChild(new_span2);
+
+//     let new_span3 = document.createElement('span');
+//     // element_div.appendChild(new_span3);
+//     new_span3.innerText = " EUR";
+//     new_span2.appendChild(new_span3);
+    
+//     let new_button = document.createElement('button');
+//     new_button.setAttribute("id", index);
+//     // element_div.appendChild(new_button);
+//     new_button.innerText = "add to cart"
+//     new_div2.appendChild(new_button)
+
+//     index++;
+//   });
+// }
+
+// function addToCart(elementId){
+//   document.getElementById('elementId').addEventListener('click', (event) => {
+//     cart.push(description[elementId]);
+//     console.log(cart)
+//     total.push(price[elementId]);
+//     console.log(price)
+//     let element_cart_list3 = document.getElementById('cart_list');
+//     let new_li3 = document.createElement('li');
+//     new_li3.innerText = cart.slice(-1)[0];
+  
+//     element_cart_list3.appendChild(new_li3);
+//     let new_span5 = document.createElement('span');
+//     new_span5.innerText = total.slice(-1)[0];
+  
+//     element_cart_list3.appendChild(new_span5);
+//     let new_span6 = document.createElement('span');
+//     new_span6.innerText = 'EUR';
+  
+//     element_cart_list3.appendChild(new_span6);
+//     let element_total3 = document.getElementById('total');
+//     element_total3.innerText = total.reduce((a,b) => a+b, 0);
+  
+//   });
+// }
+
+// createProducts()
+// addToCart("1");
+// addToCart("2");
+// addToCart("3");
 
 
 
@@ -131,7 +271,8 @@ function createProducts() {
 
     let new_img = document.createElement('img');
     new_img.setAttribute("width", "155px");
-    new_img.setAttribute("src", src[index]);
+    new_img.setAttribute("src", src[index])
+    new_img.setAttribute("id", "showroom_imgs");
     new_div2.appendChild(new_img);
 
     let new_span = document.createElement('span');
@@ -139,16 +280,20 @@ function createProducts() {
     new_div2.appendChild(new_span);
 
     let new_span2 = document.createElement('span');
-    new_span2.innerText = item;
+    let new_strong = document.createElement("strong")
+    new_strong.innerText = item;
     new_div2.appendChild(new_span2);
+    new_span2.appendChild(new_strong);
 
     let new_span3 = document.createElement('span');
-    new_span3.innerText = " EUR";
+    let new_strong2 = document.createElement('strong');
+    new_strong2.innerText = " EUR";
     new_span2.appendChild(new_span3);
+    new_span3.appendChild(new_strong2)
     
     let new_button = document.createElement('button');
     new_button.setAttribute("id", index);
-    new_button.innerText = "add to cart";
+    new_button.innerText = "ADD TO CART";
 
     // Using IIFE to capture the correct value of index
     (function(currentIndex) {
@@ -189,6 +334,30 @@ function addToCart(elementId) {
 
 // Initializing the products
 createProducts();
+
+//Adding media query for header behavior-W3 school
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    window.addEventListener("scroll",()=>{
+      document.getElementById("h13").style.display="none";
+      document.getElementById("h12").style.display="none"
+    })
+  } 
+}
+
+// Create a MediaQueryList object
+var x = window.matchMedia("(max-width: 700px)")
+
+// Call listener function at run time
+myFunction(x);
+
+// Attach listener function on state changes
+x.addEventListener("change", function() {
+  myFunction(x);
+});
+
+
 
 
 
