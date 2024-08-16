@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cool t-shirt store </title>
-    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="script.js" as="script" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="dns-prefetch" href="https://static.zara.net" /> 
 </head>
 
 <body>
 <div id="header_cart">
 <div id="header_container">
 <div id="title_container">
-<h1 id="h11">Co_OL</h1><h1 id="h12">T-SHIRT</h1><h1 id="h13">SHOP</h1>
+<h1 id="h11">Co_OL</h1><h2 id="h12">T-SHIRT</h2><h2 id="h13">SHOP</h2>
 </div>
 <div id="cart_outside">
 <button id="cart_btn">SEE CART</button>
@@ -21,17 +24,18 @@
   <div id="cart_text">
   <p id="products"><strong>PRODUCTS:</strong></p>
   <ul id="cart_list"></ul>
-  <h3>TOTAL: <span id="total">0</span></h3>
+  <h2 id="total_cart">TOTAL: <span id="total">0</span></h2>
+  <button id="check_out_btn">GO TO CHECK OUT</button>
 </div>
 </div>
 </div>
 <div id="carrousel">
 <h2 id="cool">c</h2>
-<img id="carrousel_img1">
+<img id="carrousel_img1" src="https://static.zara.net/assets/public/87e4/a379/815e43ce802d/2fd12a884574/00085034807-e1/00085034807-e1.jpg?ts=1720014311602&w=398" width="200px">
 <h2 id="cool">o</h2>
-<img id="carrousel_img2">
+<img id="carrousel_img2" src="https://static.zara.net/assets/public/f918/98a8/897c4fb3a540/8a21cc9697db/08686628250-e1/08686628250-e1.jpg?ts=1722588687943&w=398" width="200px">
 <h2 id="cool">O</h2>
-<img id="carrousel_img3">
+<img id="carrousel_img3" src="https://static.zara.net/assets/public/8499/3f66/e76c4767ace3/1990b24f2a14/04644451807-e1/04644451807-e1.jpg?ts=1721139496051&w=398" width="200px">
 <h2 id="cool">l</h2>
 </div>
 
@@ -40,27 +44,23 @@
 <div id="showroom"></div>
 <div id="footer">
 <div id="comment_container">
-<h4>TALK TO US..</h4>
+<h3>TALK TO US</h3>
 <br>
 <form id="usrform">
-  EMAIL: <input type="email" name="usrname" required>
+  <label for="mail">EMAIL: </label>
+  <input type="email" name="usrname" id="mail"required>
   <br>
   <label for="comment">COMMENT:</label>
   <textarea id="comment"rows="4" cols="50" name="comment" form="usrform"
   placeholder="Enter text here.."></textarea>
   <br>
-  <input type="submit" id="btnForm">
+  <button type="submit" id="btnForm">SUBMIT</button>
 </form>
 </div>
 <div id="end_text">
 <p>COOL T-SHIRT AND CO.</p>
 </div>
 </div>
-
-
-
-
-
 
 <script src="script.js"></script>
 </body>
