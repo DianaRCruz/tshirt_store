@@ -1,5 +1,4 @@
 # tshirt_store
-
-Deployed;
-https://cooltshirtstore.netlify.app
-
+Deployed:
+https://cooltshirtstore.netlify.app/
+vscode source

@@ -2,12 +2,6 @@ var carrousel, cart, total, is_visible;
 console.log("I am here")
 
 
-setInterval(()=>carrousel_next("carrousel_img1"), 2200);
-setInterval(()=>carrousel_previous("carrousel_img2"), 2400);
-setInterval(()=>carrousel_next("carrousel_img3"), 2600);
-
-
-
 //Moves carrosel picure to next
 function carrousel_next(img) {
   if(--window.LoopTrap <= 0) throw "Infinite loop.";
@@ -54,6 +48,14 @@ var src=["https://static.zara.net/assets/public/87e4/a379/815e43ce802d/2fd12a884
        , "https://static.zara.net/assets/public/7a46/a51b/c7f7473db488/ab56a9e93787/06224326420-e1/06224326420-e1.jpg?ts=1722410969662&w=426"
        , "https://static.zara.net/assets/public/1b7d/352c/4c2b4c9883b6/0d2f80a1ee74/00304416711-e1/00304416711-e1.jpg?ts=1715854186656&w=426"
        , "https://static.zara.net/assets/public/675f/ca54/1d9f419fa3a0/13b53db165d1/06224324250-e1/06224324250-e1.jpg?ts=1721981228813&w=426"];
+
+carrousel_next("carrousel_img1");
+setTimeout(()=>carrousel_previous("carrousel_img2"),200);
+setTimeout(()=>carrousel_next("carrousel_img3"),400);
+
+setInterval(()=>carrousel_next("carrousel_img1"), 2200);
+setInterval(()=>carrousel_previous("carrousel_img2"), 2400);
+setInterval(()=>carrousel_next("carrousel_img3"), 2600);
       
 var price=[16.70
           ,19.80
@@ -83,14 +85,6 @@ var description = ['MARILYN MONROE T-SHIRT'
 let element_inside_cart_div = document.getElementById('inside_cart_div');
 element_inside_cart_div.style.display = (false) ? 'flex' : 'none';
 is_visible = false;
-
-//Fix Caroussel Overlaping... next iterations 
-setInterval(()=>carrousel_next("carrousel_img1"), 2200);
-setInterval(()=>carrousel_previous("carrousel_img2"), 2400);
-setInterval(()=>carrousel_next("carrousel_img3"), 2600);
-
-
-
 
 
 //Cart Button Inicialization
@@ -258,12 +252,12 @@ function updateTotal() {
 
 function myFunction(x) {
   if (x.matches) { // If media query matches
-    window.addEventListener("scroll",()=>{
-      setTimeout(()=>document.getElementById("h13").style.display="none",200);
-      document.getElementById("h12").style.display="none"
-    })
+   
+      document.getElementById("h13").style.display="none";
+      document.getElementById("h12").style.display="none";
+    }
   } 
-}
+
 
 // Create a MediaQueryList object
 var x = window.matchMedia("(max-width: 700px)")
@@ -284,14 +278,8 @@ checkOutBtn.addEventListener("click",()=>location.href = "checkout.html")
 
 
 //prevents reloading the page and emits an alert
+//need  to add check for empty things 
 const btnForm = document.getElementById("btnForm")
 btnForm.addEventListener("click",(event)=>{
   event.preventDefault()
   alert("thank's for your comment")})
-
-
-
-
-
-
-

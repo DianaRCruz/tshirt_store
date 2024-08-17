@@ -96,19 +96,20 @@ ul{
     justify-content: space-evenly;
     align-items: center;
     height: 88vh;
-    background-color: white;
+    background-color:#f1f1f1;
+    overflow: hidden;
 
 }
 
 #carrousel_img1{
-    width: 200px;
+    width: 250px;
 }
 
 #carrousel_img2{
-    width: 200px;
+    width: 250px;
 }
 #carrousel_img3{
-    width: 200px;
+    width: 250px;
 }
 
 #showroom{
