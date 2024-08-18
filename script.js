@@ -303,8 +303,7 @@ checkOutBtn.addEventListener("click",()=>location.href = "checkout.html")
 //-- Solution:the event handler shoul be at the form element "submit", not at form buttom "click" event
 const btnForm = document.getElementById("usrform")
 btnForm.addEventListener("submit",(event)=>{
-  if(requiredTest2 === true){
   event.preventDefault();
-  alert("thank's for your comment")}})
+  alert("thank's for your comment")})
 
 
