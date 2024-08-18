@@ -1,4 +1,4 @@
-
+/* fix margin footer */
 
 *{
     box-sizing: border-box;
@@ -121,7 +121,7 @@ ul{
     background-color: rgb(207, 207, 207);
 
     padding-top: 10px;
-    padding-bottom: 10px;  
+    /* padding-bottom: 40px;   */
     
 
 }
@@ -313,7 +313,9 @@ button {
 
                  @media screen and (min-width: 450px) {
                     #showroom{
-                        padding: 0;
+                        padding: 0px;
+                        padding-bottom: 20px;
+                
                     }
                    
                      }

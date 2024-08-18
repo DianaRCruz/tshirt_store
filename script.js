@@ -1,5 +1,12 @@
 var carrousel, cart, total, is_visible;
-console.log("I am here")
+
+//Remenber after tests for debbug 
+// console.log("I am here")
+// console.log("hello")
+// const formtest = document.getElementById("mail")
+// const requiredTest2 = formtest.required
+// console.log(requiredTest2)
+// console.log(requiredTest2 === false)
 
 
 //Moves carrosel picure to next
@@ -250,7 +257,7 @@ function updateTotal() {
 
 //Adding media query for header behavior-W3 school
 
-function myFunction(x) {
+function mediaQueryWindowSizeSmall(x) {
   if (x.matches) { // If media query matches
    
       document.getElementById("h13").style.display="none";
@@ -258,28 +265,46 @@ function myFunction(x) {
     }
   } 
 
-
 // Create a MediaQueryList object
-var x = window.matchMedia("(max-width: 700px)")
+const mediaQuery1 = window.matchMedia("(max-width: 700px)");
 
 // Call listener function at run time
-myFunction(x);
+mediaQueryWindowSizeSmall(mediaQuery1);
 
 // Attach listener function on state changes
-x.addEventListener("change", function() {
-  myFunction(x);
+mediaQuery1.addEventListener("change", function() {
+  mediaQueryWindowSizeSmall(mediaQuery1);
+});
+
+//Change back to orinal features after being changed
+function mediaQueryWindowSizeBig(x) {
+  if (x.matches) { // If media query matches
+   
+      document.getElementById("h13").style.display="block";
+      document.getElementById("h12").style.display="block";
+    }
+  } 
+
+const mediaQuery2 = window.matchMedia("(min-width: 700px)")
+mediaQuery2.addEventListener("change", function() {
+  mediaQueryWindowSizeBig(mediaQuery2);
 });
 
 
-const checkOutBtn = document.getElementById("check_out_btn")
 
+//takes user to check out page
+const checkOutBtn = document.getElementById("check_out_btn")
 checkOutBtn.addEventListener("click",()=>location.href = "checkout.html")
 
 
 
 //prevents reloading the page and emits an alert
-//need  to add check for empty things 
-const btnForm = document.getElementById("btnForm")
-btnForm.addEventListener("click",(event)=>{
-  event.preventDefault()
-  alert("thank's for your comment")})
+//need  to add check for empty things
+//-- Solution:the event handler shoul be at the form element "submit", not at form buttom "click" event
+const btnForm = document.getElementById("usrform")
+btnForm.addEventListener("submit",(event)=>{
+  if(requiredTest2 === true){
+  event.preventDefault();
+  alert("thank's for your comment")}})
+
+
