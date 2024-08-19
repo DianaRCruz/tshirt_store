@@ -28,8 +28,9 @@ function carrousel_previous(img) {
 }
 
 
+
 carrousel = ['https://static.zara.net/assets/public/87e4/a379/815e43ce802d/2fd12a884574/00085034807-e1/00085034807-e1.jpg?ts=1720014311602&w=398" width="150'
-            ,'https://static.zara.net/assets/public/f918/98a8/897c4fb3a540/8a21cc9697db/08686628250-e1/08686628250-e1.jpg?ts=1722588687943&w=398" width="150'
+            ,'https://static.zara.net/assets/public/1b7d/352c/4c2b4c9883b6/0d2f80a1ee74/00304416711-e1/00304416711-e1.jpg?ts=1715854186656&w=426" width="150'
             ,'https://static.zara.net/assets/public/8499/3f66/e76c4767ace3/1990b24f2a14/04644451807-e1/04644451807-e1.jpg?ts=1721139496051&w=398" width="150'
             ,'https://static.zara.net/assets/public/0c37/f8e9/ad1e40e595dd/1cce73e64355/05644889250-e1/05644889250-e1.jpg?ts=1723113115810&w=426" width="150'
             ,'https://static.zara.net/assets/public/4f7e/0cea/34de4052bcd0/17734a0f2f94/06224325500-e1/06224325500-e1.jpg?ts=1722593593758&w=426" width="150'
@@ -37,7 +38,7 @@ carrousel = ['https://static.zara.net/assets/public/87e4/a379/815e43ce802d/2fd12
             ,'https://static.zara.net/assets/public/8653/f510/04e341acb7fa/2d3f1e3954a5/02160324526-e1/02160324526-e1.jpg?ts=1723447024578&w=426" width="150'
             ,'https://static.zara.net/assets/public/87cc/d076/527d422dab39/be6c924b20aa/04805315615-e1/04805315615-e1.jpg?ts=1722954750084&w=426" width="150'
             ,'https://static.zara.net/assets/public/7a46/a51b/c7f7473db488/ab56a9e93787/06224326420-e1/06224326420-e1.jpg?ts=1722410969662&w=426" width="150'
-            ,'https://static.zara.net/assets/public/1b7d/352c/4c2b4c9883b6/0d2f80a1ee74/00304416711-e1/00304416711-e1.jpg?ts=1715854186656&w=426" width="150'
+            ,'https://static.zara.net/assets/public/f918/98a8/897c4fb3a540/8a21cc9697db/08686628250-e1/08686628250-e1.jpg?ts=1722588687943&w=398" width="150'
             ,'https://static.zara.net/assets/public/675f/ca54/1d9f419fa3a0/13b53db165d1/06224324250-e1/06224324250-e1.jpg?ts=1721981228813&w=426" width="150'];
 
 cart = [];
@@ -56,13 +57,20 @@ var src=["https://static.zara.net/assets/public/87e4/a379/815e43ce802d/2fd12a884
        , "https://static.zara.net/assets/public/1b7d/352c/4c2b4c9883b6/0d2f80a1ee74/00304416711-e1/00304416711-e1.jpg?ts=1715854186656&w=426"
        , "https://static.zara.net/assets/public/675f/ca54/1d9f419fa3a0/13b53db165d1/06224324250-e1/06224324250-e1.jpg?ts=1721981228813&w=426"];
 
-carrousel_next("carrousel_img1");
-setTimeout(()=>carrousel_previous("carrousel_img2"),200);
-setTimeout(()=>carrousel_next("carrousel_img3"),400);
+setTimeout(()=>carrousel_next("carrousel_img1"),200);
+setTimeout(()=>carrousel_previous("carrousel_img2"),400);
+setTimeout(()=>carrousel_next("carrousel_img3"),600);
 
-setInterval(()=>carrousel_next("carrousel_img1"), 2200);
-setInterval(()=>carrousel_previous("carrousel_img2"), 2400);
-setInterval(()=>carrousel_next("carrousel_img3"), 2600);
+// setInterval(()=>carrousel_next("carrousel_img1"), 2200);
+// setInterval(()=>carrousel_previous("carrousel_img2"), 2400);
+// setInterval(()=>carrousel_next("carrousel_img3"), 2600);
+
+setTimeout(()=>{setInterval(()=>carrousel_next("carrousel_img1"), 1600)},300)
+setTimeout(()=>{setInterval(()=>carrousel_previous("carrousel_img2"),1600)},700)
+setTimeout(()=>{setInterval(()=>carrousel_next("carrousel_img3"), 1600)},1100)
+
+
+
       
 var price=[16.70
           ,19.80
